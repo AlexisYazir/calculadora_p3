@@ -48,6 +48,11 @@ function calcularResultado() {
     }
     resultadoSpan.textContent = resultado.toString();
 }
+function reset() {
+    location.reload();
+}
 // Escuchar el evento de clic
 const calcularBtn = document.getElementById("calcular");
+const resetForm = document.getElementById("res");
 calcularBtn.addEventListener("click", calcularResultado);
+resetForm.addEventListener("click", reset);
