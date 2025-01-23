@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <!--Link de bulma-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <!--Link de font awesome icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+<body>
+    <div class="login-container container">
+        <form class="formsSend box has-background-dark"  method="POST" autocomplete="on" enctype="multipart/form-data" style="max-width: 400px; margin: 0 auto; margin-top: 30px; margin-bottom: 30px;">
+          <input type="hidden" name="modulo_usuario" value="registrar">
+          
+          <h1 class="title is-4 has-text-centered">CALCULADORA BÁSICA</h1>  
+      
+          <div class="field">
+            <label class="label">Ingresa el primer valor</label>
+            <div class="control has-icons-left">
+              <input type="number" class="input" id="number_1" name="number_1" placeholder="Valor 1"  
+               required>
+              <span class="icon is-small is-left">
+                <i class="fa-solid fa-hashtag"></i>
+              </span>
+            </div>
+          </div> 
+      
+          <div class="field">
+            <label class="label">Ingresa el segundo valor</label>
+            <div class="control has-icons-left">
+              <input type="number" class="input" id="number_2" name="number_2" placeholder="Valor 2" 
+               required>
+              <span class="icon is-small is-left">
+                <i class="fa-solid fa-hashtag"></i>
+              </span>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Selecciona la operación</label>
+            <div class="control">
+              <div class="select is-fullwidth">
+                <select id="operacion" name="operacion" required>
+                  <option value="1">Sumar</option>
+                  <option value="2">Restar</option>
+                  <option value="3">Multiplicar</option>
+                  <option value="4">Dividir</option>
+                </select>
+              </div>
+            </div>
+          </div> <br>
+
+          <div class="buttons is-centered">
+            <button type="button" id="calcular" class="button is-link">Calcular</button> 
+          </div>
+
+          <h1 class="title is-4 has-text-centered">Resultado: <span id="resultado"></span></h1>
+        </form>
+    </div>
+    
+    <script src="/js/calculadora.js"></script>
+</body>
+</html>
